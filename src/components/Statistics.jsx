@@ -1,5 +1,6 @@
 import { Component } from "react";
 import PropTypes from "prop-types"
+import styles from "../styles/Statistics.module.css";
 
 export default class Statistics extends Component {
     static defaultProps = {
@@ -21,13 +22,13 @@ export default class Statistics extends Component {
         const { title, stats } = this.props;
 
         return (
-            <section className="statistics">
-                {title && <h2 className="title">{title}</h2>}
-                <ul className="stat-list">
+            <section className={styles.statistics}>
+                {title && <h2 className={styles.title}>{title}</h2>}
+                <ul className={styles.statList}>
                     {stats.map(stat => (
-                        <li key={stat.id} className="item">
-                            <span className="label">{stat.label}</span>
-                            <span className="percentage">{stat.percentage}</span>
+                        <li key={stat.id} className={styles.item}>
+                            <span className={styles.label}>{stat.label}</span>
+                            <span className={styles.percentage}>{stat.percentage}</span>
                         </li>
                     ))}
                 </ul>

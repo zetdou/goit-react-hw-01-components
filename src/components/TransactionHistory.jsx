@@ -1,5 +1,6 @@
 import { Component } from "react";
 import PropTypes from "prop-types"
+import styles from "../styles/TransactionHistory.module.css";
 
 export default class TransactionHistory extends Component {
     
@@ -18,7 +19,7 @@ export default class TransactionHistory extends Component {
         const { items } = this.props;
 
         return (
-            <table className="transaction-history">
+            <table className={styles.transactionHistory}>
                 <thead>
                     <tr>
                         <th>Type</th>

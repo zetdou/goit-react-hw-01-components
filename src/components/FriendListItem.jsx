@@ -1,5 +1,6 @@
 import { Component } from "react"; 
 import PropTypes from "prop-types";
+import styles from "../styles/FriendListItem.module.css";
 
 export default class FriendList extends Component {
     static PropTypes = {
@@ -12,10 +13,10 @@ export default class FriendList extends Component {
         const { avatar, name, isOnline } = this.props;
 
         return (
-            <li className="item">
-                <span className={`status ${isOnline ? "online" : "offline"}`}></span>
-                <img className="avatar" src={avatar} alt="User avatar" width="48" />
-                <p className="name">{name}</p>
+            <li className={styles.item}>
+                <span className={`${styles.status} ${isOnline ? styles.online : styles.offline}`}></span>
+                <img className={styles.avatar} src={avatar} alt="User avatar" width="48" />
+                <p className={styles.name}>{name}</p>
             </li>
         )
     }

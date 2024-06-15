@@ -1,6 +1,7 @@
 import { Component } from "react";
 import PropTypes from "prop-types";
 import FriendListItem from "./FriendListItem";
+import styles from "../styles/FriendList.module.css";
 
 export default class FriendList extends Component {
     
@@ -19,7 +20,7 @@ export default class FriendList extends Component {
         const { friends } = this.props;
 
         return (
-            <ul className="friend-list">
+            <ul className={styles.friendList}>
                 {friends.map(friend => (
                     <FriendListItem
                         key={friend.id}
